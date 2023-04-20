@@ -1,0 +1,49 @@
+﻿@model  Villa_Web.Models.Villa_Modols.VillaNumberDropDown  
+@{
+    ViewData["Title"] = "Villa Number Create";
+}
+
+<form asp-action="CreateVillaNumber">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Create Villa Number</h1>
+        <hr />
+
+        <div class="row">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="col-2 pt-3">
+                <label asp-for="VillaNumber.VillaNo" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="VillaNumber.VillaNo" class="form-control" />
+                <span asp-validation-for="VillaNumber.VillaNo" class="text-danger"></span>
+            </div>
+            
+            <div class="col-2 pt-3">
+                <label asp-for="VillaNumber.VillaID" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <select asp-for="VillaNumber.VillaID" class="form-select" asp-items="@Model.VillaList">
+                    <option disabled selected>Select Villa</option>
+                </select>
+                <span asp-validation-for="VillaNumber.VillaID" class="text-danger"></span>
+                
+            </div>
+            
+            <div class="col-2 pt-3">
+                <label asp-for="VillaNumber.SpecialDetail" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <textarea asp-for="VillaNumber.SpecialDetail" class="form-control"></textarea>
+                <span asp-validation-for="VillaNumber.SpecialDetail" class="text-danger"></span>
+            </div>
+            <div class="col-2 offset-8">
+                <a asp-action="IndexVillaNumber" asp-controller="VillaNumber" class="btn-primary btn form-control">Back to list</a>
+            </div>
+            <div class="col-2">
+                <input type="submit" value="Create" class="btn-success btn form-control" />
+            </div>
+        </div>
+    </div>
+</form>

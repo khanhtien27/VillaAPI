@@ -1,0 +1,50 @@
+﻿@model Villa_Web.Models.Villa_Modols.VillaNumberDeleteDD
+
+<form asp-action="DeleteVillaNumber">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Delete Villa Number</h1>
+        <hr />
+        <input hidden asp-for="VillaNumber.VillaNo" />
+        <div class="row">
+            <div class="col-2 pt-3">
+                <label asp-for="VillaNumber.VillaNo" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="VillaNumber.VillaNo" disabled class="form-control" />
+            </div>
+            
+            <div class="col-2 pt-3">
+                <label asp-for="VillaNumber.VillaID" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="VillaNumber.VillaID" disabled class="form-control" />
+            </div>
+            
+            <div class="col-2 pt-3">
+                <label asp-for="VillaNumber.SpecialDetail" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="VillaNumber.SpecialDetail" readonly class="form-control" />
+            </div>
+
+            <div class="col-2 pt-3">
+                <label asp-for="VillaNumber.VillaID" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <select asp-for="VillaNumber.VillaID" class="form-select" asp-items="@Model.VillaList" disabled>
+                    <option disabled selected>Select Villa</option>
+                </select>
+                <span asp-validation-for="VillaNumber.VillaID" class="text-danger"></span>
+
+            </div>     
+            <div class="col-2 offset-8">
+                <a asp-action="IndexVillaNumber" asp-controller="VillaNumber" class="btn-primary btn form-control">Back to list</a>
+            </div>
+            <div class="col-2">
+                <input type="submit" value="Delete" class="btn-danger btn form-control" />
+            </div> 
+        </div>
+    </div>
+</form>
+

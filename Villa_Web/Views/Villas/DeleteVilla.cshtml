@@ -1,0 +1,77 @@
+﻿@model Villa_Web.Models.DTO.VillaDTO
+
+<form asp-action="DeleteVilla">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Delete Villa</h1>
+        <hr />
+        <input hidden asp-for="Id" />
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-2 pt-3">
+                <label asp-for="Name" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <br />
+            <br />
+            <div class="col-2 pt-3">
+                <label asp-for="Details" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <textarea asp-for="Details" class="form-control"></textarea>
+            </div>
+            <br />
+            <br />
+            <div class="col-2 pt-3">
+                <label asp-for="Rate" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Rate" class="form-control" />
+            </div>
+            <br />
+            <br />
+            <div class="col-2 pt-3">
+                <label asp-for="Occupancy" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Occupancy" class="form-control" />
+            </div>
+            <br />
+            <br />
+            <div class="col-2 pt-3">
+                <label asp-for="Sqft" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="Sqft" class="form-control" />
+            </div>
+            <br />
+            <br />
+            <div class="col-2 pt-3">
+                <label asp-for="ImageUrl" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <input asp-for="ImageUrl" class="form-control" />
+            </div>
+            <br />
+            <br />
+            <div class="col-2 pt-3">
+                <label asp-for="Amenity" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10 pt-3">
+                <textarea asp-for="Amenity" class="form-control"></textarea>
+            </div>
+
+            <div class="col-2 offset-8">
+                <a asp-action="IndexVilla" asp-controller="Villas" class="btn-primary btn form-control">Back to list</a>
+            </div>
+            <div class="col-2">
+                <input type="submit" value="Delete" class="btn-danger btn form-control" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
